@@ -16,7 +16,8 @@
         <img src="images/ElgedWhite.png" alt="Elged Butcher Logo" class="logo">
         <h1>ELGED BUTCHER</h1>
         <p>Where Science Meets Taste</p>
-        <a href="#products" class="btn">Order Now</a>
+        <!-- WhatsApp Order -->
+        <a href="https://wa.me/201008714510" target="_blank" class="btn">Order Now</a>
     </div>
 </header>
 
@@ -50,29 +51,54 @@
         <div class="product-card">🍔 Ready-to-Cook (Burgers, Kofta, Sausages)</div>
         <div class="product-card">📦 Custom Orders on Demand</div>
     </div>
-    <a href="#" class="btn" >View Catalog</a>
+    <!-- Catalog button -->
+    <button id="catalogBtn" class="btn">View Catalog</button>
 </section>
+
+<!-- Catalog Modal -->
+<div id="catalogModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <img src="images/menu.png" alt="Elged Butcher Menu" class="catalog-img">
+    </div>
+</div>
 
 
 
 <!-- Footer -->
 <footer>
     <div class="container">
-        <p>📍 Address: Zagzig-Eg</p>
+        <p>📍 Address: [Your Address Here]</p>
         <p>📞 Phone/WhatsApp: +201008714510</p>
         <p>🚚 Delivery Available Everywhere</p>
-        <a class="link-footer" href="https://www.facebook.com/elged.abdallah" target="_blank">🔗 Follow us on Social Media</a>
-
+        <a class="link-footer" href="https://www.facebook.com/elged.abdallah">🔗 Follow us on Social Media</a>
     </div>
 </footer>
 
 <script>
+    // Dark Mode Toggle
     const toggle = document.getElementById("darkToggle");
     toggle.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
         toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
     });
+
+    // Catalog Modal
+    const modal = document.getElementById("catalogModal");
+    const btn = document.getElementById("catalogBtn");
+    const span = document.getElementById("closeModal");
+
+    btn.onclick = function() {
+        modal.style.display = "flex";
+    }
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 </script>
 </body>
 </html>
-
