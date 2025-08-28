@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELGED BUTCHER</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Dark Mode Toggle -->
+<button id="darkToggle">🌙 Dark Mode</button>
+
+<!-- Header -->
+<header class="hero">
+    <div class="overlay">
+        <img src="images/ElgedWhite.png" alt="Elged Butcher Logo" class="logo">
+        <h1>ELGED BUTCHER</h1>
+        <p>Where Science Meets Taste</p>
+        <a href="#products" class="btn">Order Now</a>
+    </div>
+</header>
+
+<!-- About -->
+<section class="about container">
+    <h2>About Us</h2>
+    <p>
+        Founded by a University Professor specialized in <strong>Meat Health & Safety</strong>,
+        Elged Butcher brings together science, expertise, and passion for quality.
+        Every cut of meat is carefully inspected to ensure <strong>trust, safety, and flavor</strong>.
+    </p>
+</section>
+
+<!-- Why Us -->
+<section class="why-us container">
+    <h2>Why Choose Us?</h2>
+    <div class="features">
+        <div class="feature-card">🔬 Scientific Quality Control</div>
+        <div class="feature-card">🥩 Fresh Local Meat Daily</div>
+        <div class="feature-card">🧼 Hygiene & Global Standards</div>
+        <div class="feature-card">🚚 Fast Delivery Service</div>
+        <div class="feature-card">💰 Fair Prices without Compromise</div>
+    </div>
+</section>
+
+<!-- Products -->
+<section id="products" class="products container">
+    <h2>Our Products</h2>
+    <div class="product-grid">
+        <div class="product-card">🥩 Fresh Local Meat (Beef, Lamb, Veal)</div>
+        <div class="product-card">🍔 Ready-to-Cook (Burgers, Kofta, Sausages)</div>
+        <div class="product-card">📦 Custom Orders on Demand</div>
+    </div>
+    <a href="#" class="btn" >View Catalog</a>
+</section>
+
+
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>📍 Address: Zagzig-Eg</p>
+        <p>📞 Phone/WhatsApp: +201008714510</p>
+        <p>🚚 Delivery Available Everywhere</p>
+        <a class="link-footer" href="https://www.facebook.com/elged.abdallah" target="_blank">🔗 Follow us on Social Media</a>
+
+    </div>
+</footer>
+
+<script>
+    const toggle = document.getElementById("darkToggle");
+    toggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        toggle.textContent = document.body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
+    });
+</script>
+</body>
+</html>
